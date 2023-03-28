@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CHECKmail!</title>
+</head>
+<body>
+<div>
+    <h2>CHECKmail!</h2>
+    <h3> List of Locations</h3>
+</div>
+<hr/>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th> Location ID</th>
+            <th> Location Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="location: ${location}">
+            <th th:text="${location.id}"></th>
+            <th th:text="${location.name}"></th>
+        </tr>
+    </tbody>
+
+</table>
+</body>
+</html>
